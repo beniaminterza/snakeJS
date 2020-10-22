@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Press Start 2P', cursive;
+    text-shadow: 10px 10px 20px blue;
 }
 
 body{
@@ -29,7 +30,8 @@ canvas {
     transform: translate(-50%, -50%);
     border: 2px solid white;
     background-color:#262626;
-    box-shadow: 20px 20px rebeccapurple;
+    box-shadow: 30px 0px 20px rgb(201, 85, 8);
+    transition: 1s;
 }
 
 
@@ -45,14 +47,14 @@ canvas {
     font-size: 80px;
     color: #eae2b7;
     cursor: pointer;
-    box-shadow: -20px -20px #f77f00;
+    box-shadow: -20px -20px 20px #f77f00;
     transition: 1s;
 }
 
 #playButton:hover{
-    background-color: #073b4c;
-    color: #ffd166;
-    border: 10px solid #ef476f;
-    box-shadow: 20px 20px #06d6a0;
+    background-color: #eae2b7;
+    color: #003049;
+    border: 10px solid #f77f00;
+    box-shadow: 20px 20px 20px #d62828;
     transition: 1s;
 }

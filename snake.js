@@ -46,15 +46,22 @@ class Snake{
         if(key == "ArrowUp" || key == "w" && this.x < canvas.width && this.x >= 0){
             this.directionX = 0;
             this.directionY = -speed;
+            canvas.style.boxShadow = "0px -30px 20px rgb(201, 85, 8)";
         } else if(key == "ArrowDown" || key == "s" && this.x < canvas.width && this.x >= 0){
             this.directionX = 0;
             this.directionY = speed;
+            canvas.style.boxShadow = "0px 30px 20px rgb(201, 85, 8)";
+
         } else if(key == "ArrowLeft" || key == "a" && this.y < canvas.height && this.y >= 0){
             this.directionX = -speed;
             this.directionY = 0;
+            canvas.style.boxShadow = "-30px 0px 20px rgb(201, 85, 8)";
+
         } else if(key == "ArrowRight" || key == "d" && this.y < canvas.height && this.y >= 0){
             this.directionX = speed;
             this.directionY = 0;
+            canvas.style.boxShadow = "30px 0px 20px rgb(201, 85, 8)";
+
         }
     }
 }
