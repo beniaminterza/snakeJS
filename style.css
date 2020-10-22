@@ -10,12 +10,14 @@ body{
     background-color: black;
 }
 
-#scoreH2{
-    margin-top: 50px;
-    margin-bottom: 10px;
+.scores {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
 }
 
 h2{
+    width: 400px;
     color: white;
     text-align: center;
 }
@@ -27,17 +29,30 @@ canvas {
     transform: translate(-50%, -50%);
     border: 2px solid white;
     background-color:#262626;
+    box-shadow: 20px 20px rebeccapurple;
 }
+
 
 #playButton{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border: 10px solid greenyellow;
+    border: 10px solid #d62828;
     border-radius: 5px;
-    background-color:white;
+    background-color:#003049;
     padding: 20px;
     font-size: 80px;
+    color: #eae2b7;
     cursor: pointer;
+    box-shadow: -20px -20px #f77f00;
+    transition: 1s;
+}
+
+#playButton:hover{
+    background-color: #073b4c;
+    color: #ffd166;
+    border: 10px solid #ef476f;
+    box-shadow: 20px 20px #06d6a0;
+    transition: 1s;
 }

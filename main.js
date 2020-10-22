@@ -8,6 +8,7 @@ const ctx = canvas.getContext("2d");
 const score = document.getElementById("scoreH2");
 const highscore = document.getElementById("highscore");
 const button = document.getElementById("playButton");
+const timem = document.getElementById("time");
 ctx.fill()
 
 let size = 20;
@@ -36,7 +37,7 @@ window.addEventListener("keydown", function(event){
 })
 
 function animate(){
-    if(frame % 10 === 0){
+    if(frame % 5 === 0){
         ctx.clearRect(0, 0, canvas.width, canvas.height);
 
         createGrid();
@@ -45,14 +46,6 @@ function animate(){
         snake.update();
         snake.draw();
         checkCollision();
-
-
-
-        ctx.beginPath();
-        ctx.strokeStyle = "white";
-        ctx.moveTo(food.x+speed/2,food.y+speed/2);
-        ctx.lineTo(snake.x+speed/2, snake.y+speed/2);
-        ctx.stroke();
     }
     if(!isOver){
         requestAnimationFrame(animate);
@@ -110,3 +103,12 @@ function restart(){
     button.style.display = "block";
     score.innerHTML = "Score: 0";
 }
+
+function startTime() {
+    let today = new Date();
+    let h = today.getHours();
+    let m = today.getMinutes();
+    let s = today.getSeconds();
+    timem.innerHTML = h + ":" + m + ":" + s;
+    setTimeout(startTime, 1000);
+  }

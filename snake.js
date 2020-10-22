@@ -43,16 +43,16 @@ class Snake{
     }
 
     changeDirection(key){
-        if(key == "ArrowUp" && this.x < canvas.width && this.x >= 0){
+        if(key == "ArrowUp" || key == "w" && this.x < canvas.width && this.x >= 0){
             this.directionX = 0;
             this.directionY = -speed;
-        } else if(key == "ArrowDown" && this.x < canvas.width && this.x >= 0){
+        } else if(key == "ArrowDown" || key == "s" && this.x < canvas.width && this.x >= 0){
             this.directionX = 0;
             this.directionY = speed;
-        } else if(key == "ArrowLeft" && this.y < canvas.height && this.y >= 0){
+        } else if(key == "ArrowLeft" || key == "a" && this.y < canvas.height && this.y >= 0){
             this.directionX = -speed;
             this.directionY = 0;
-        } else if(key == "ArrowRight" && this.y < canvas.height && this.y >= 0){
+        } else if(key == "ArrowRight" || key == "d" && this.y < canvas.height && this.y >= 0){
             this.directionX = speed;
             this.directionY = 0;
         }
