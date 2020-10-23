@@ -18,7 +18,7 @@ let hue = 0;
 let isOver = false;
 let highscoreValue = getCookie("highscore");
 if(highscoreValue != null){
-    highscoreValue == 0;
+    highscoreValue = 0;
 }
 highscore.innerHTML = "Highscore: " + highscoreValue;
 let snake;
