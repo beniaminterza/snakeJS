@@ -17,7 +17,7 @@ let frame = 0;
 let hue = 0;
 let isOver = false;
 let highscoreValue = getCookie("highscore");
-if(highscoreValue != null){
+if(highscoreValue == null){
     highscoreValue = 0;
 }
 highscore.innerHTML = "Highscore: " + highscoreValue;
@@ -41,7 +41,7 @@ window.addEventListener("keydown", function(event){
 })
 
 function animate(){
-    if(frame % 5 === 0){
+    if(frame % divisor === 0){
         ctx.clearRect(0, 0, canvas.width, canvas.height);
 
         createGrid();
@@ -57,6 +57,7 @@ function animate(){
         restart();
     }
     frame++;
+    if(frame > 10000) frame = 0;
 }
 
 function checkIfEat(){
