@@ -16,7 +16,11 @@ let speed = size;
 let frame = 0;
 let hue = 0;
 let isOver = false;
-let highscoreValue = 0;
+let highscoreValue = getCookie("highscore");
+if(highscoreValue != null){
+    highscoreValue == 0;
+}
+highscore.innerHTML = "Highscore: " + highscoreValue;
 let snake;
 let food;
 
@@ -92,9 +96,9 @@ function createGrid(){
 
 function setHighscore(){
     if(snake.tailLength >= highscoreValue){
-        console.log("neww highscore")
         highscoreValue = snake.tailLength;
         highscore.innerHTML = "Highscore: " + highscoreValue;
+        setCookie("highscore", highscoreValue, 100);
     }
 }
 
@@ -112,3 +116,25 @@ function startTime() {
     timem.innerHTML = h + ":" + m + ":" + s;
     setTimeout(startTime, 1000);
   }
+
+function setCookie(name,value,days) {
+    let expires = "";
+    if (days) {
+        let date = new Date();
+        date.setTime(date.getTime() + (days*24*60*60*1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+}
+
+function getCookie(name) {
+    console.log("cookie: " + document.cookie);
+    let nameEQ = name + "=";
+    let ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+        let c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+}
