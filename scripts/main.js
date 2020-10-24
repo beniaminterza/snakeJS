@@ -1,6 +1,5 @@
 /*Todo
-    -button->play, reset
-    -highscore
+    -
 */
 
 const canvas = document.getElementById("canvas1");
@@ -23,6 +22,7 @@ if(highscoreValue == null){
 highscore.innerHTML = "Highscore: " + highscoreValue;
 let snake;
 let food;
+let newHighscore = false;
 
 function startGame(){
     snake = new Snake();
@@ -97,6 +97,10 @@ function createGrid(){
 
 function setHighscore(){
     if(snake.tailLength >= highscoreValue){
+        if(!newHighscore){
+            newHighscore =true;
+            explosion();
+        } 
         highscoreValue = snake.tailLength;
         highscore.innerHTML = "Highscore: " + highscoreValue;
         setCookie("highscore", highscoreValue, 100);
