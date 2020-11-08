@@ -1,24 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
-*{
+* {
     margin: 0;
     padding: 0;
-    font-family: 'Press Start 2P', cursive;
+    font-family: "Press Start 2P", cursive;
     text-shadow: 10px 10px 20px blue;
 }
 
-body{
+body {
     background-color: black;
 }
 
-.scores {
+.header {
     display: flex;
     justify-content: space-between;
     margin: 20px;
     z-index: 3;
 }
 
-h2{
+h2 {
     width: 400px;
     color: white;
     text-align: center;
@@ -30,27 +30,26 @@ h2{
     left: 50%;
     transform: translate(-50%, -50%);
     border: 2px solid white;
-    background-color:#262626;
+    background-color: #262626;
     box-shadow: 30px 0px 20px rgb(201, 85, 8);
     transition: 1s;
 }
 
-#canvasBackground{
+#canvasBackground {
     position: absolute;
     top: 0;
     left: 0;
     z-index: -2;
 }
 
-
-#playButton{
+#playButton {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     border: 10px solid #d62828;
     border-radius: 5px;
-    background-color:#003049;
+    background-color: #003049;
     padding: 20px;
     font-size: 80px;
     color: #eae2b7;
@@ -59,10 +58,30 @@ h2{
     transition: 1s;
 }
 
-#playButton:hover{
+#playButton:hover {
     background-color: #eae2b7;
     color: #003049;
     border: 10px solid #f77f00;
     box-shadow: 20px 20px 20px #d62828;
     transition: 1s;
 }
+
+#animation {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#animation label {
+    color: white;
+    margin-left: 30px;
+    text-shadow: 10px 10px 20px yellow;
+    font-size: 25px;
+}
+
+#animation input[type=checkbox] {
+    transform: scale(1.5);
+    
+}
+

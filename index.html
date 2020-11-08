@@ -1,28 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Snake</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body onload="startTime()">
-    <canvas id="canvasBackground"></canvas>
-    <div class="scores">
-        <h2 id="scoreH2">Score: 0</h2>
-        <h2 id="time">Time</h2>
-        <h2 id="highscore">Highscore: 0</h2>
-        <h2 id="fps"></h2>
-    </div>
-    
-    <canvas id="canvas1" width="600" height="600"></canvas>
-    <button id="playButton" onclick="startGame()">Play</button>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Snake</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body onload="startTime()">
+        <canvas id="canvasBackground"></canvas>
+        <div class="header">
+            <h2 id="scoreH2">Score: 0</h2>
+            <h2 id="time">Time</h2>
+            <h2 id="highscore">Highscore: 0</h2>
+            <h2 id="fps"></h2>
+        </div>
 
-    <script src="scripts/snake.js"></script>
-    <script src="scripts/food.js"></script>
-    <script src="scripts/coordinates.js"></script>
-    <script src="scripts/main.js"></script>
-    <script src="scripts/frame.js"></script>
-    <script src="scripts/explosion.js"></script>
-</body>
+        <div id="animation">
+            <input type="checkbox" name="" id="animInput" checked="true">
+            <label for="animInput">Animations</label>
+        </div>
+        
+
+        <canvas id="canvas1" width="600" height="600"></canvas>
+        <button id="playButton" onclick="startGame()">Play</button>
+
+        <script src="scripts/snake.js"></script>
+        <script src="scripts/food.js"></script>
+        <script src="scripts/coordinates.js"></script>
+        <script src="scripts/main.js"></script>
+        <script src="scripts/frame.js"></script>
+        <script src="scripts/explosion.js"></script>
+        <script src="scripts/explosionFood.js"></script>
+    </body>
 </html>
